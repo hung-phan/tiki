@@ -1,0 +1,40 @@
+{
+  "presets": ["es2015", "react", "stage-0"],
+  "plugins": [
+    "transform-runtime",
+    ["module-alias", [
+      { "src": "./app", "expose": "app" },
+      { "src": "./config", "expose": "config" },
+      { "src": "./app/client", "expose": "client" },
+      { "src": "./app/server", "expose": "server" }
+    ]]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        ["react-transform", {
+          "transforms": [{
+            "transform": "react-transform-hmr",
+            "imports": ["react"],
+            "locals": ["module"]
+          }, {
+            "transform": "react-transform-catch-errors",
+            "imports": ["react", "redbox-react"]
+          }]
+        }]
+      ]
+    },
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-inline-elements",
+        "transform-react-remove-prop-types"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "rewire"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+:local
+.item {
+  margin-bottom: 48px;
+
+  &__text {
+    white-space: nowrap;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+  }
+}
