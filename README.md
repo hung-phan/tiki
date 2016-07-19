@@ -1,5 +1,7 @@
 # Tikis
 
+![alt text](https://raw.githubusercontent.com/hung-phan/tiki/master/tiki.gif "application screenshot")
+
 There is an included image that describe the app feature
 
 - Offline mode for websocket using socket.io
